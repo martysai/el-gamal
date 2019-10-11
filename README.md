@@ -16,15 +16,15 @@ A basic language of the program is Russian. User’s manual in Russian is detail
 1. Main Window. It contains 3 buttons: Begin, Reference (in Russian), Info about project.
 <img src="https://i.imgur.com/lBIht73.png" width="430">
   2. Mode Choice Window. It contains of 2 image buttons and 1 back button: the first provides the mode of the finite field over prime order, the second one provides non-prime order (implementation is represented by the field of polynomials):
-<img src="https://downloader.disk.yandex.ru/preview/1ef01424c696742f0941584f4d45878a1f23f13bb5141ffdd2c3963a5a3f33e1/5c0b030d/wOaR_I4HoROg8O6u6xk91zrB-yVk-0FRWY88BLncmrEMez2XYo78RXVIfFWBk5OIDt4fcaMww4NfYhonk0znAQ%3D%3D?uid=0&filename=ModeWindow.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&tknv=v2&size=2048x2048" width="430">
+<img src="https://i.imgur.com/75aCN4z.png" width="430">
   3. Cipher window provides a text field - a message that will be used in cryptosystem. Also you may choose text file. After pressing 1st button we will pass to the main cipher window.
-<img src="https://downloader.disk.yandex.ru/preview/1c7fc51718d7a6c072c49a02b8e52b10bcf0a097a9af7282d033c8d4ea63b5b3/5c0b060d/wOaR_I4HoROg8O6u6xk919rmbnlI1OOkrbqIQePCKe33fq0OQCse1rGbvygPJJLr9HKmKa0MeIXepV6Y1ZgtBQ%3D%3D?uid=0&filename=CipherWindow.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&tknv=v2&size=2048x2048" width="430">
+<img src="https://i.imgur.com/VAfGDXG.png" width="430">
   4. This window will represent the key information about cryptosystem. "g" is a common polynomial. 
-<img src="https://downloader.disk.yandex.ru/preview/25b37a3c2a7f3c79a1661c51a68d3c047d04d37256a070c503d3f9ed0397fec9/5c0b0645/wOaR_I4HoROg8O6u6xk91721ITFbr64oRsBSMzpe10xh_XNFFV_F8lSZutjI9yOqiTTNpp-SBP--DUTFdVKWwQ%3D%3D?uid=0&filename=AliceInfo.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&tknv=v2&size=2048x2048" width="430">
-  5. After that you will see the information about encrypting/decrypting processes.
-  
-<img src="https://downloader.disk.yandex.ru/preview/6bd465ccce91c460ecc47b8d575a2f8b1bb8ac030458ff3f17513921305271fa/5c0b057e/wOaR_I4HoROg8O6u6xk9183ucwnRMycovqyCGnMOyXOnO8AdD_3k-FZPGXNKCslRXYcJPC04UhzMq_ZLlAT1oQ%3D%3D?uid=0&filename=CipherWindow2.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&tknv=v2&size=2048x2048" width="430">
-<img src="https://downloader.disk.yandex.ru/preview/a5ea92c099e9fb3dfa59b798b285ff97f0013ca1cd647fab2d1e05bdfeabb220/5c0b069d/wOaR_I4HoROg8O6u6xk91x-p2wh6qBM16Nua05y9sSugrcG5PqRHKVq_5Xe1XL01vgZj6OcY6sasuwHlIUPIyA%3D%3D?uid=0&filename=DecipherWindow.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&tknv=v2&size=2048x2048" width="430">
+<img src="https://i.imgur.com/tnn2djG.png" width="800">
+<img src="https://i.imgur.com/vnEbi4l.png" width="800">
+  5. After that you will see the information about encrypting/decrypting processes:
+<img src="https://i.imgur.com/eZJnrXt.png" width="800">
+<img src="https://i.imgur.com/UjpT4TL.png" width="800">
 
 
 ## Theory
