@@ -1,8 +1,6 @@
 ## El Gamal Encryption
 
-The project provides implementation of El Gamal Cryptosystem over finite fields of different (prime & non-prime) order.
-To run the program unrar file ElGamalEncryption.rar, then go to /bin/bedug and run exe-file.
-Or you may run it through Visual Studio.
+To launch the project run .exe file.
 
 ## Purposes and Aims
 
