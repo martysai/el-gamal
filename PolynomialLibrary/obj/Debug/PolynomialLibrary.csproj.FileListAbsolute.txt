@@ -1,0 +1,6 @@
+c:\users\саидовмаратарсланови\source\repos\ElGamalEncryption\PolynomialLibrary\obj\Debug\PolynomialLibrary.csproj.CoreCompileInputs.cache
+C:\Users\СаидовМаратАрсланови\source\repos\ElGamalEncryption\PolynomialLibrary\bin\Debug\PolynomialLibrary.dll
+C:\Users\СаидовМаратАрсланови\source\repos\ElGamalEncryption\PolynomialLibrary\bin\Debug\PolynomialLibrary.pdb
+C:\Users\СаидовМаратАрсланови\source\repos\ElGamalEncryption\PolynomialLibrary\obj\Debug\PolynomialLibrary.dll
+C:\Users\СаидовМаратАрсланови\source\repos\ElGamalEncryption\PolynomialLibrary\obj\Debug\PolynomialLibrary.pdb
+C:\Users\СаидовМаратАрсланови\source\repos\ElGamalEncryption\PolynomialLibrary\obj\Debug\PolynomialLibrary.csprojAssemblyReference.cache

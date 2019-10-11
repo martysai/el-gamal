@@ -1,0 +1,101 @@
+﻿<Window x:Class="ElGamalEncryption.NumberCipherWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ElGamalEncryption"
+        xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath"
+        mc:Ignorable="d"
+        MinWidth="700"
+        MinHeight="500"
+        Title="КРИПТОСИСТЕМА ЭЛЬ-ГАМАЛЯ" FontFamily="Times New Roman"
+        Icon="Images/Lock-icon.png"
+        WindowState="Maximized"
+        KeyDown="IsEnterPressed"
+        Background="#00184f">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="90*" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="33*" />
+            <ColumnDefinition Width="33*" />
+            <ColumnDefinition Width="33*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <ScrollViewer Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"
+                      HorizontalScrollBarVisibility="Auto"
+                      BorderBrush="White" BorderThickness="15" Background="White">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="4*" />
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="3*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Row="0" Grid.ColumnSpan="2">
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" Foreground="#1c0963">Шифрование. Передача сообщения:</Label>
+                    <StackPanel Orientation="Horizontal">
+                        <Label HorizontalAlignment="Center" FontSize="20"  Style="{StaticResource LatexStyle}" Foreground="#1c0963">Общая формула криптосистемы Эль-Гамаля:</Label>
+                        <controls:FormulaControl Formula="{Binding Path=MainFormula}"  FontSize ="35" Margin="30,5" />
+                        <Image Source="Images/CurveArrow.png" Width="50"/>
+                        <controls:FormulaControl Formula="{Binding Path=MainDecipherFormula}"  FontSize ="35" Margin="30,5" />
+                    </StackPanel>
+                    <StackPanel Name="EncodeStackPanel">
+                        <Label FontSize="20"  Style="{StaticResource LatexStyle}" Foreground="#1c0963" Content= "Разбиение и кодирование исходного сообщения:" />
+                    </StackPanel>
+                    <StackPanel Name="TransformStackPanel">
+                        <Label FontSize="20"  Style="{StaticResource LatexStyle}" Foreground="#1c0963" Content= "Передача сообщения:" />
+                    </StackPanel>
+                    <StackPanel Name="CipheredStackPanel">
+                        <Label FontSize="20"  Style="{StaticResource LatexStyle}" Foreground="#1c0963" Content= "Зашифрованный вид полученного сообщения:" />
+                    </StackPanel>
+
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+        <Rectangle Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="4">
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#2d27b1" Offset="1.0" />
+                    <GradientStop Color="#00184f" Offset="0.5" />
+                    <GradientStop Color="#2d27b1" Offset="0.25" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Button Style="{StaticResource MainButton}" x:Name="CipherCloseButton"
+                Grid.Row="2" Grid.Column="2" VerticalAlignment="Stretch"  
+                HorizontalAlignment="Left"
+                Width="100" 
+                Content="ОК"
+                Click="CipherCloseButton_Click" />
+        <Button Style="{StaticResource MainButton}" x:Name="SaveFileButton"
+                Grid.Row="2" Grid.Column="2" VerticalAlignment="Stretch"  
+                HorizontalAlignment="Right"
+                Width="100"
+                Content="Сохранить"
+                Click="SaveFileButton_Click" />
+        <Button Style="{StaticResource MainButton}" x:Name="BackButton"
+                Grid.Row="2" Grid.Column="3" VerticalAlignment="Stretch"  
+                HorizontalAlignment="Right"
+                Width="100" 
+                Content="В меню"
+                Click="BackButton_Click" />
+        <Button Style="{StaticResource MainButton}" x:Name="ReturnButton"
+                Grid.Row="2" Grid.Column="1" VerticalAlignment="Stretch"  
+                HorizontalAlignment="Left"
+                Width="100" 
+                Content="Назад"
+                Click="ReturnButton_Click" />
+    </Grid>
+</Window>

@@ -1,0 +1,241 @@
+﻿<Window x:Class="ElGamalEncryption.ReferenceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ElGamalEncryption"
+        xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath"
+        mc:Ignorable="d"
+        Title="КРИПТОСИСТЕМА ЭЛЬ-ГАМАЛЯ" FontFamily="Times New Roman"
+        Icon="Images/Lock-icon.png"
+        KeyDown="IsEnterPressed"
+        WindowState="Maximized"
+        Width="750" Height="500"
+        Background="#00184f">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="90*" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="33*" />
+            <ColumnDefinition Width="33*" />
+            <ColumnDefinition Width="33*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <ScrollViewer Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"
+                      HorizontalScrollBarVisibility="Auto"
+                      BorderBrush="White" BorderThickness="15" Background="White">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="4*" />
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="3*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Row="0" Grid.ColumnSpan="2">
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" FontSize ="22" Margin="10,0" Foreground="#1c0963">Здравствуйте! Вы запустили "Криптосистему Эль-Гамаля".</Label>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" FontSize ="22" Margin="10,0" Foreground="#1c0963">В этом окне вы можете ознакомиться c необходимой теорией, алгоритмом и с руководством пользователя.</Label>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" FontSize ="22" Margin="10,0" Foreground="#1c0963">Для эффективного использования программного продукта ознакомьтесь с приведенной ниже справкой:</Label>
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" FontSize ="35" Margin="10,0" Foreground="#1c0963">Теория:</Label>
+                    <StackPanel Orientation="Horizontal">
+                        <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,0" FontSize ="22" Foreground="#1c0963">
+                        Бинарная операция на множестве M - отображение:
+                        </Label>
+                        <controls:FormulaControl Formula="{Binding Path=FxF}"  FontSize ="35" Margin="14,12" />
+                    </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                        <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,0" FontSize ="22" Foreground="#1c0963" FontStyle="Italic">Полем</Label>
+                        <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="-15,0" FontSize ="22" Foreground="#1c0963">называют тройку</Label>
+                        <controls:FormulaControl Formula="{Binding Path=Fpm}"  FontSize ="35" Margin="18,10" />
+                        <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="-15,0" FontSize ="22" Foreground="#1c0963">(</Label>
+                        <controls:FormulaControl Formula="{Binding Path=F}"  FontSize ="35" Margin="0,12" />
+                        <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="-5,0" FontSize ="22" Foreground="#1c0963">- множество, </Label>
+                        <controls:FormulaControl Formula="{Binding Path=Plusmult}"  FontSize ="35" Margin="10,13" />
+                        <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="-5,0" FontSize ="22" Foreground="#1c0963">- бинарные операции на нём)</Label>
+                    </StackPanel>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-10" FontSize ="22" Foreground="#1c0963">со следующими свойствами:</Label>
+                    <StackPanel Orientation="Horizontal" Margin="0,-15">
+                        <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,23" FontSize ="22" Foreground="#1c0963">1. Коммутативность сложения:</Label>
+                        <controls:FormulaControl Formula="{Binding Path=CommutableAddition}"  FontSize ="35" Margin="10,32" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,-15">
+                        <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,0,0,25" FontSize ="22" Foreground="#1c0963">2. Ассоциативность сложения:</Label>
+                        <controls:FormulaControl Formula="{Binding Path=AssosiativeAddition}"  FontSize ="35" Margin="10,9" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,-15">
+                        <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,8,0,20" FontSize ="22" Foreground="#1c0963">3. Существование нуля:</Label>
+                        <controls:FormulaControl Formula="{Binding Path=Zero}"  FontSize ="35" Margin="10,19" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,-15">
+                        <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,10,0,12" FontSize ="22" Foreground="#1c0963">4. Существование противоположного элемента:</Label>
+                        <controls:FormulaControl  Formula="{Binding Path=Minus}"  FontSize ="35" Margin="10,19" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,-15"> 
+                        <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,10,0,15" FontSize ="22" Foreground="#1c0963">5. Коммутативность умножения:</Label>
+                        <controls:FormulaControl  Formula="{Binding Path=CommutableMultiplication}"  FontSize ="35" Margin="10,19" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,-15">
+                        <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,10,0,12" FontSize ="22" Foreground="#1c0963">6. Ассоциативность умножения:</Label>
+                        <controls:FormulaControl  Formula="{Binding Path=AssociativeMultiplication}"  FontSize ="35" Margin="10,19" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,-15">
+                        <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,10,0,12" FontSize ="22" Foreground="#1c0963">7. Существование единичного элемента:</Label>
+                        <controls:FormulaControl  Formula="{Binding Path=One}"  FontSize ="35" Margin="10,19" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,-15">
+                        <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,10,0,3" FontSize ="22" Foreground="#1c0963">8. Существование обратного элемента для ненулевых элементов:</Label>
+                        <controls:FormulaControl  Formula="{Binding Path=Back}"  FontSize ="35" Margin="10,16" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,-15">
+                        <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,15,0,0" FontSize ="22" Foreground="#1c0963">9. Дистрибутивность умножения относительно сложения:</Label>
+                        <controls:FormulaControl  Formula="{Binding Path=Distribute}"  FontSize ="35" Margin="10,21" />
+                    </StackPanel>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10" FontSize ="22" Foreground="#1c0963">Конечное поле, т.е. поле, состоящее из конечного числа элементов,</Label>
+                    <StackPanel Orientation="Horizontal" Margin ="0,-15,0,10">
+                        <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-5" FontSize ="22" Foreground="#1c0963">может иметь порядок вида</Label>
+                        <controls:FormulaControl  Formula="{Binding Path=Pn}"  FontSize ="35" Margin="10,5" />
+                        <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="-5,-8" FontSize ="22" Foreground="#1c0963">,</Label>
+                        <controls:FormulaControl  Formula="{Binding Path=P}"  FontSize ="35" Margin="8,10" />
+                        <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="0,-6" FontSize ="22" Foreground="#1c0963">- простое,</Label>
+                        <controls:FormulaControl  Formula="{Binding Path=N}"  FontSize ="35" Margin="8,10" />
+                        <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="0,-6" FontSize ="22" Foreground="#1c0963">- натуральное.</Label>
+                    </StackPanel>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Изоморфизм - это функция между двумя полями, устанавливающая соответствие один-к-одному между элементами полей</Label>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">с сохранением операций. Если существует изоморфизм между двумя полями, поля называются изоморфными.</Label>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Поле конечного порядка единственно с точностью до изоморфизма.</Label>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Тогда разумно рассматривать любое представление этого поля.</Label>
+                    <StackPanel Orientation="Horizontal">
+                        <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">В частности, конечное поле может порождаться факторкольцом:</Label>
+                        <Image Margin="0,-7,0,10"  Source="Images/FqWhite.jpg" Width="150" HorizontalAlignment="Left" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Здесь</Label>
+                        <controls:FormulaControl  Formula="{Binding Path=H}"  FontSize ="35" Margin="10,2" />
+                        <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">является неприводимым многочленом с коэффициентами по модулю p.</Label>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Таким образом, число элементов в поле равно</Label>
+                        <controls:FormulaControl  Formula="{Binding Path=Pedegree}"  FontSize ="35" Margin="10,-4" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                        <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Также поле может иметь простой порядок. С точностью до изоморфизма это обычное кольцо вычетов:</Label>
+                        <Image Margin="8,-7,0,0"  Source="Images/ZpWhite.jpg" Width="40" HorizontalAlignment="Left"/>
+                    </StackPanel>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">В данной программе реализована криптосистема Эль-Гамаля сразу над двумя различными полями: над факторкольцом и над полем вычетов.</Label>
+                    <StackPanel Orientation="Horizontal" Margin="0,-20,0,10">
+                        <Label HorizontalAlignment="Center" FontSize="22" Margin="10,23,0,0"  Style="{StaticResource LatexStyle}" Foreground="#1c0963">Общая формула криптосистемы Эль-Гамаля:</Label>
+                        <controls:FormulaControl Formula="{Binding Path=MainFormula}"  FontSize ="70" Margin="30,30" />
+                        <Image Source="Images/CurveArrow.png" Width="70" Margin="0,-20"/>
+                        <controls:FormulaControl Formula="{Binding Path=MainDecipherFormula}"  FontSize ="70" Margin="30,30" />
+                    </StackPanel>
+
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" FontSize ="35" Foreground="#1c0963">Алгоритм:</Label>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Введем условные обозначения:</Label>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">В программе представлены два человека, предполагаемые пользователи Алиса и Боб.</Label>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Алиса решает послать Бобу сообщение, причем очень секретно. Она разбивает сообщение на кусочки по 5 символов.</Label>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Затем создается в поле:</Label>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">1. В случае первого режима выбирается большое простое число на основе алгоритма "Решето Эратосфена".</Label>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">2. В случае второго режима генерируется порядок кольца, которое факторизуем, и неприводимый многочлен с коэффициентами из кольца.</Label>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Алиса кодирует каждый кусочек по следующим правилам:</Label>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">1. В случае первого режима она применяет следующую формулу:</Label>
+                    <StackPanel Orientation="Horizontal">
+                        <controls:FormulaControl  Formula="{Binding Path=EncodeFirstMode}"  FontSize ="35" Margin="15,6" />
+                        <controls:FormulaControl  Formula="{Binding Path=M}"  FontSize ="35" Margin="10,9" />
+                        <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,0" FontSize ="22" Foreground="#1c0963"> - мощность входного алфавита</Label>
+                        <controls:FormulaControl  Formula="{Binding Path=Ai}"  FontSize ="35" Margin="10,12" />
+                        <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,0" FontSize ="22" Foreground="#1c0963">- i-й символ слова</Label>
+                    </StackPanel>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Заметим, что это биекция.</Label>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">2. В случае второго режима создается многочлен степени не выше 4, в котором каждому коэффициенту</Label>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">соответствует кодировка символа на этой позиции в исходном слове.</Label>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Затем применяет общую формулу к каждому из кусочков. Выделим 2 аспекта:</Label>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">1. Бобу для успешного дешифрования необходимо и достаточно получить зашифрованное сообщение + маску.</Label>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">2. Никто другой на основе этой информации получить исходное сообщение не может.</Label>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Затем Алиса передает Бобу свои зашифрованные сообщения и маску. </Label>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">На основе этой информации Боб производит несколько действий:</Label>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">1. Возводит маску в свою секретную степень. Получает ОБЩИЙ КЛЮЧ.</Label>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">2. Расширенным алгоритмом Евклида находит обратный к общему ключу многочлен/вычет.</Label>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">3. Умножает полученное сообщение на полученную величину, дешифруя сообщения. Тем самым Боб принимает сообщение Алисы.</Label>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Затем Боб проделает операцию 3 над каждым кусочком, затем восстанавливает их.</Label>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Декодирование:</Label>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">2. Каждому коэффициенту многочлена сопоставим соответствующий вычет (код символа), затем получим текстовое представление.</Label>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">1. Чтобы получить код i-го символа, выполним следующее преобразование вычета n:</Label>
+                    <controls:FormulaControl  Formula="{Binding Path=ModP}"  FontSize ="35" Margin="15,12" />
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" FontSize ="35" Foreground="#1c0963">Руководство пользователя:</Label>
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" Margin="10,-6,0,10" FontSize ="22" Foreground="#1c0963">После запуска приложения открывается главное окно:</Label>
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Для начала работы с приложением нажмите на кнопку 1.</Label>
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Если вы хотите получить справочную информацию, то нажмите на кнопку 2.</Label>
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Для получения сведений о разработчике программы нажмите на кнопку 3.</Label>
+                    <Image Margin="23,-7,-15,0"  Source="Images/MainWindow.png" HorizontalAlignment="Center" Width="400" Height="400"/>
+
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" Margin="10,-6,0,10" FontSize ="22" Foreground="#1c0963">При нажатии на кнопку "Начать!" вы можете выбрать режим:</Label>
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Для работы с полем вычетов нажмите на кнопку 1.</Label>
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Для работы с конечным полем непростого порядка нажмите на кнопку 2.</Label>
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Чтобы выйти в главное меню, нажмите на кнопку 3.</Label>
+                    <Image Margin="30,10,0,0" Source="Images/ModeWindow.png" HorizontalAlignment="Center" Width="400" Height="400"/>
+
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" Margin="10,-6,0,10" FontSize ="22" Foreground="#1c0963">Перед вами откроется окно ввода текста</Label>
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">После нажатия на кнопку 1 начнется обработка текста из поля ввода.</Label>
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Чтобы загрузить текст из файла, нажмите на кнопку 2.</Label>
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Чтобы вернуться в главное меню, нажмите на кнопку 3.</Label>
+                    <Image Margin="55,10,0,0" Source="Images/ChooseWindow.png" HorizontalAlignment="Center" Width="400" Height="400"/>
+
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" Margin="10,-6,0,10" FontSize ="22" Foreground="#1c0963">Выбрав режим поля вычетов, перед вами откроется информация о порядке поля, об Алисе и о Бобе.</Label>
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Информация об Алисе/Бобе содержит основные данные: открытый, закрытый ключи, процессы вычисления открытого ключа.</Label>
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Информация о пользователе выглядит примерно так:</Label>
+                    <Image Margin="55,20,0,0" Source="Images/AliceInfo.png" HorizontalAlignment="Center"/>
+
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" Margin="10,-6,0,10" FontSize ="22" Foreground="#1c0963">Затем программа показывает, каким образом закодировались символы:</Label>
+                    <Image Margin="55,20,0,0" Source="Images/Codes.png" HorizontalAlignment="Center"/>
+
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" Margin="10,-6,0,10" FontSize ="22" Foreground="#1c0963">Итак, следующие окна схожи с этим. Они содержат несколько из следующих кнопок: "Назад", "Меню", "ОК", "Сохранить".</Label>
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Нажатие на кнопку "Назад" (на рис. кнопка 1) влечет выход в предыдущее окно.</Label>
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Нажатие на кнопку "ОК" (на рис. кнопка 2) влечет переход в следующее окно.</Label>
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">С помощью кнопки "Сохранить" (на рис. кнопка 3) можно сохранить данные данного окна в файла формата .doc</Label>
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Нажатие на кнопку "Меню" (на рис. кнопка 4) влечет выход в главное меню.</Label>
+                    <Image Margin="55,20,0,0" Width="900"  Source="Images/CipherWindow.png" HorizontalAlignment="Center"/>
+
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" Margin="10,-6,0,10" FontSize ="22" Foreground="#1c0963">Процесс шифрования включает в себя информацию о кодировании, передачи, просмотра зашифрованных сообщений.</Label>
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Кодирование происходит по формуле, описанной в разделе "Алгоритм".</Label>
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Шифрование и передача происходят по основной формуле криптосистемы.</Label>
+                    <Image Margin="55,20,0,0" Source="Images/CipherWindow2.png" HorizontalAlignment="Center"/>
+
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" Margin="10,-6,0,10" FontSize ="22" Foreground="#1c0963">Процесс дешифрования включает в себя информацию о декодировании</Label>
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" Margin="10,-6,0,10" FontSize ="22" Foreground="#1c0963">зашифрованных сообщений, о передаче и дешифровании.</Label>
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Декодирование описано в разделе "Алгоритм".</Label>
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Передача и дешифрование происходят по основной формуле криптосистемы.</Label>
+                    <Image Margin="55,20,0,0" Source="Images/DecipherWindow.png" HorizontalAlignment="Center"/>
+                    <Label HorizontalAlignment="Center" Style="{StaticResource LatexStyle}" Margin="10,-6,0,10" FontSize ="22" Foreground="#1c0963">Над конечными полями непростого порядка интерфейс устроен похожим образом.</Label>
+                    <!--<Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">В программе представлены два человека, предполагаемые пользователи Алиса и Боб.</Label>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Алиса решает послать Бобу сообщение, причем очень секретно. Она разбивает сообщение на кусочки по 5 символов.</Label>
+                    <Label HorizontalAlignment="Left" Style="{StaticResource LatexStyle}" Margin="10,-6" FontSize ="22" Foreground="#1c0963">Затем применяет общую формулу к каждому из кусочков. Боб же дешифрует каждый из кусочков.</Label>-->
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+        <Rectangle Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="4">
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#2d27b1" Offset="1.0" />
+                    <GradientStop Color="#00184f" Offset="0.5" />
+                    <GradientStop Color="#2d27b1" Offset="0.25" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Button Style="{StaticResource MainButton}" x:Name="MenuButton"
+                Grid.Row="2" Grid.Column="2" VerticalAlignment="Stretch"  
+                HorizontalAlignment="Center"
+                Width="100" 
+                Content="В меню"
+                Click="MenuButton_Click" />
+    </Grid>
+</Window>

@@ -1,0 +1,6 @@
+c:\users\саидовмаратарсланови\source\repos\ElGamalEncryption\NumberLibrary\bin\Debug\NumberLibrary.dll
+c:\users\саидовмаратарсланови\source\repos\ElGamalEncryption\NumberLibrary\bin\Debug\NumberLibrary.pdb
+c:\users\саидовмаратарсланови\source\repos\ElGamalEncryption\NumberLibrary\obj\Debug\NumberLibrary.csproj.CoreCompileInputs.cache
+c:\users\саидовмаратарсланови\source\repos\ElGamalEncryption\NumberLibrary\obj\Debug\NumberLibrary.dll
+c:\users\саидовмаратарсланови\source\repos\ElGamalEncryption\NumberLibrary\obj\Debug\NumberLibrary.pdb
+C:\Users\СаидовМаратАрсланови\source\repos\ElGamalEncryption\NumberLibrary\obj\Debug\NumberLibrary.csprojAssemblyReference.cache
