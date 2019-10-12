@@ -1,6 +1,6 @@
 ## El Gamal Encryption
 
-To launch the project run .exe file.
+Project is written for Windows 7, 8, 10. To launch it run .exe file.
 
 ## Purposes and Aims
 
